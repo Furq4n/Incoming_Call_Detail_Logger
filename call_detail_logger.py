@@ -219,11 +219,11 @@ def monitor_modem_line():
                 print modem_data
 
                 if ("DATE" in modem_data):
-                    call_record['DATE'] = (modem_data[5:]).strip(' \t\n\r')
+                    call_record['DATE'] = (modem_data[7:]).strip(' \t\n\r')
                 if ("TIME" in modem_data):
-                    call_record['TIME'] = (modem_data[5:]).strip(' \t\n\r')
+                    call_record['TIME'] = (modem_data[7:]).strip(' \t\n\r')
                 if ("NMBR" in modem_data):
-                    call_record['NMBR'] = (modem_data[5:]).strip(' \t\n\r')
+                    call_record['NMBR'] = (modem_data[7:]).strip(' \t\n\r')
                     # Call call details logger
                     print call_record
                     call_details_logger(call_record)
